@@ -17,8 +17,6 @@
     --accent-color: #4F4F4F;
     --accent-color: #FFFFFF;
     --background-color: #E5E5E5;
-    --background-color: #F5F5F5;
-    --text-color: #333333;
     --text-color: #333333;
     /* Font */
     --font-primary: "", sans-serif;
@@ -43,6 +41,192 @@ a {
     cursor: pointer;
 }
 
+/* a:hover {
+    opacity: 0.6;
+} */
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+} */
+
+
+
+/* Section & Section Header  */
+section {
+    padding: 80px 0;
+    /* why overflow hidden */
+    overflow: hidden;
+}
+
+/*=============== Header  ===============*/
+header {
+    background-color: var(--primary-color);
+    /* absolute to use z-index to put it over the hero.  */
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 50px;
+    /* color: white; */
+    padding-right: 10px;
+    /* why???*/
+    /* z-index: 997; */
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0;
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    color: white;
+}
+
+/*----====== Desktop Navigation  =======----*/
+@media(min-width: 1280px) {
+    .navbar {
+        padding: 0
+    }
+
+    .navbar ul {
+        /* cancel bootstrap ul margin-bottom and padding-left  */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+    }
+
+    .navbar>ul>li {
+        white-space: nowrap;
+        padding: 10px 0 10px 28px;
+    }
+
+    .navbar a,
+    .navbar a:focus {
+        /* why focus?  */
+        display: flex;
+        /* align-items: center; */
+        /* justify-content: space-between; */
+        /* to make the underline a little wider  */
+        padding: 0 3px;
+        /* what is font-primary used for? */
+        font-family: var(--font-primary);
+        font-size: 14px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.6);
+        text-transform: uppercase;
+        /* white-space: nowrap; */
+        transition: .3s;
+        /* position relative to position the underline */
+        position: relative;
+    }
+
+    .navbar>ul>li>a::before {
+        content: "";
+        position: absolute;
+        background-color: var(--secondary-color);
+        width: 100%;
+        height: 2px;
+        bottom: -6px;
+        left: 0;
+        /* why this ??? */
+        width: 0px;
+        /* what is this ? */
+        /* why 2 speeds?? what is the second for  */
+        transition: all .3s ease-in-out 0s;
+        visibility: hidden;
+    }
+
+    /* .active??  */
+    .navbar ul>li:hover>a::before,
+    .navbar ul>li>a:hover::before,
+    .navbar .active::before {
+        visibility: visible;
+        /* why do we need width: 100% here. why width 100% up doesn't work?? */
+        width: 100%;
+    }
+
+    /* active focus what's for? */
+    /* what is focus?? */
+    .navbar a:hover,
+    .navbar .active,
+    .navbar .active:focus,
+    .navbar li:hover>a {
+        color: white;
+    }
+
+
+    .navbar .dropdown ul {
+        display: block;
+        position: absolute;
+        left: 28px;
+        top: calc(100% + 30px);
+        margin: 0;
+        padding: 10px 0;
+        z-index: 99;
+        opacity: 0;
+        visibility: hidden;
+        background: #fff;
+        box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+        transition: 0.3s;
+    }
+
+    .navbar .dropdown ul li {
+        min-width: 200px;
+    }
+
+    .navbar .dropdown ul a {
+        padding: 10px 20px;
+        font-size: 15px;
+        text-transform: none;
+        color: var(--color-default);
+        font-weight: 400;
+    }
+
+    .navbar .dropdown ul a i {
+        font-size: 12px;
+    }
+
+    .navbar .dropdown ul a:hover,
+    .navbar .dropdown ul .active:hover,
+    .navbar .dropdown ul li:hover>a {
+        color: var(--secondary-color);
+        font-weight: 600;
+    }
+
+    .navbar .dropdown:hover>ul {
+        opacity: 1;
+        top: 100%;
+        visibility: visible;
+    }
+
+    .navbar .dropdown .dropdown ul {
+        top: 0;
+        left: calc(100% - 30px);
+        visibility: hidden;
+    }
+
+    .navbar .dropdown .dropdown:hover>ul {
+        opacity: 1;
+        top: 0;
+        left: 100%;
+        visibility: visible;
+    }
+
+    .mobile-nav-show,
+    .mobile-nav-hide {
+        display: none;
+    }
+}
+
+/*=============== Main  ===============*/
 main {
     flex: 1 1;
 }
