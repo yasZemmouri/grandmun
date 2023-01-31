@@ -18,6 +18,7 @@
     --accent-color: #FFFFFF;
     --background-color: #E5E5E5;
     --text-color: #333333;
+    --h-color: #2e3135;
     /* Font */
     --font-primary: "", sans-serif;
     --font-secondary: "", sans-serif;
@@ -45,15 +46,28 @@ a {
     opacity: 0.6;
 } */
 
-/* h1,
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
     font-family: var(--font-primary);
-    color: var(--primary-color);
-} */
+    color: var(--h-color);
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: white;
+}
+
+h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
 
 
 
@@ -62,6 +76,13 @@ section {
     padding: 80px 0;
     /* why overflow hidden */
     overflow: hidden;
+}
+
+/* section .container-xl {
+    background-color: white;
+} */
+section:nth-child(even) {
+    background-color: white;
 }
 
 /*=============== Header  ===============*/
@@ -79,14 +100,7 @@ header {
     /* z-index: 997; */
 }
 
-h1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 0;
-    font-family: var(--font-primary);
-    text-transform: uppercase;
-    color: white;
-}
+
 
 /*----====== Desktop Navigation  =======----*/
 @media(min-width: 1280px) {
@@ -373,6 +387,11 @@ h1 {
     color: white;
 }
 
+#hero h2,
+#hero h3 {
+    color: white;
+}
+
 /* .hero .carousel {
     width: 100%;
     min-height: 100vh;
@@ -429,14 +448,18 @@ h1 {
 }
 
 #hero h3 {
-    font-size: 4rem;
+    font-size: 5rem;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
     user-select: none;
 }
 
 @media (max-width: 768px) {
-    .hero .info h2 {
-        font-size: 36px;
+    #hero.info h2 {
+        font-size: 4.2rem;
+    }
+
+    #hero h3 {
+        font-size: 4rem;
     }
 }
 

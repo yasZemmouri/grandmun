@@ -74,29 +74,29 @@ if (scrollTop) {
 /**
  * Countdown
  **/
+const countdownEl = document.getElementById('countdown');
 const daysEl = document.getElementById('days');
 const hoursEl = document.getElementById('hours');
 const minutesEl = document.getElementById('minutes');
 const secondsEl = document.getElementById('seconds');
 //Set end Date
-const countDownDate = new Date("April 13, 2023 23:59:59").getTime();
+const countDownDate = new Date("April 14, 2023 7:59:59").getTime();
 let x = setInterval(function () {
     //Get today's date
     let now = new Date().getTime();
     //Find distance between now and the countdown date in seconds
     const distance = Math.floor(countDownDate - now) / 1000;
-    //Convert the duration into days, hours, minutes and seconds
-    const days = Math.floor(distance / (60 * 60 * 24));
-    const hours = Math.floor(distance % (60 * 60 * 24) / (60 * 60));
-    const minutes = Math.floor((distance % (60 * 60)) / (60));
-    const seconds = Math.floor((distance % (60)));
-    //Display Result
-    daysEl.textContent = days;
-    hoursEl.textContent = ('0' + hours).slice(-2);
-    minutesEl.textContent = ('0' + minutes).slice(-2);
-    secondsEl.textContent = ('0' + seconds).slice(-2);
-
-
-
+    if (distance > 0) {
+        //Convert the duration into days, hours, minutes and seconds
+        const days = Math.floor(distance / (60 * 60 * 24));
+        const hours = Math.floor(distance % (60 * 60 * 24) / (60 * 60));
+        const minutes = Math.floor((distance % (60 * 60)) / (60));
+        const seconds = Math.floor((distance % (60)));
+        //Display Result
+        daysEl.textContent = days;
+        hoursEl.textContent = ('0' + hours).slice(-2);
+        minutesEl.textContent = ('0' + minutes).slice(-2);
+        secondsEl.textContent = ('0' + seconds).slice(-2);
+    } else countdownEl.remove();
 }, 1000);
 
