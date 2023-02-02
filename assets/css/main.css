@@ -98,6 +98,7 @@ header {
     padding-right: 10px;
     /* why???*/
     /* z-index: 997; */
+    z-index: 5;
 }
 
 
@@ -252,7 +253,7 @@ header {
         max-width: 400px;
         bottom: 0;
         transition: 0.3s;
-        z-index: 9997;
+        z-index: 1000;
     }
 
     .navbar ul {
