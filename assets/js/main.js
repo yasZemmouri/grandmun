@@ -151,7 +151,10 @@ var Countdown = {
 
         // Initialize total seconds
         // this.total_seconds = ((this.values.days * 24) + (this.values.hours * 60 * 60 + (this.values.minutes * 60))) + this.values.seconds;
-        this.total_seconds = this.values.seconds + (this.values.minutes * 60) + (this.values.hours * 60 * 60) + (this.values.days * 24 * 60 * 60);
+        // comment out 
+        // this.total_seconds = this.values.seconds + (this.values.minutes * 60) + (this.values.hours * 60 * 60) + (this.values.days * 24 * 60 * 60);
+        // My code 
+        this.total_seconds = distance;
 
         // Animate countdown to the end 
         this.count();
@@ -170,24 +173,24 @@ var Countdown = {
             $sec_2 = this.$.seconds.eq(1);
 
         this.countdown_interval = setInterval(function () {
-
+            // review those 
             if (that.total_seconds > 0) {
 
                 --that.values.seconds;
 
-                if (that.values.minutes >= 0 && that.values.seconds <= 0) {
+                if (that.values.minutes >= 0 && that.values.seconds < 0) {
 
                     that.values.seconds = 59;
                     --that.values.minutes;
                 } // end if
 
-                if (that.values.hours >= 0 && that.values.minutes <= 0) {
+                if (that.values.hours >= 0 && that.values.minutes < 0) {
 
                     that.values.minutes = 59;
                     --that.values.hours;
                 } // end if
 
-                if (that.values.days >= 0 && that.values.hours <= 0) {
+                if (that.values.days >= 0 && that.values.hours < 0) {
 
                     that.values.hours = 24;
                     --that.values.days;
