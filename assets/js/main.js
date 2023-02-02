@@ -1,4 +1,5 @@
 "use strict";
+const heroEl = document.getElementById('hero');
 
 // Mobile nav toggle
 const mobileNavShowEl = document.querySelector('.mobile-nav-show');
@@ -54,6 +55,16 @@ navDropdowns.forEach(el => {
         }
     })
 });
+
+//parallax function
+window.addEventListener("scroll", function () {
+    let offset = window.pageYOffset;
+    if (heroEl) {
+        heroEl.style.backgroundPositionY = offset * 0.5 + "px";
+    }
+    console.log('offset: ' + offset);
+    console.log('position: ' + offset * 0.5);
+})
 
 /**
  * Scroll top button
