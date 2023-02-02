@@ -120,7 +120,7 @@ var Countdown = {
         // var Todayminutes = Today.getMinutes();
         // var Todayseconds = Today.getSeconds();
 
-        var DeadLine = new Date('April 14, 2023 7:59:59');
+        var DeadLine = new Date('Apr 14, 2023 7:59:59');
         //commented out
         // var DeadLineday = DeadLine.getDate();
         // var DeadLinehours = DeadLine.getUTCHours(); // I'm not sure why getHours() here is "loaded jangá"
@@ -192,7 +192,7 @@ var Countdown = {
 
                 if (that.values.days >= 0 && that.values.hours < 0) {
 
-                    that.values.hours = 24;
+                    that.values.hours = 23;
                     --that.values.days;
                 } // end if
 
