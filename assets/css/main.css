@@ -469,7 +469,7 @@ header {
     font-size: 18px;
 }
 
-.hero .info .btn-apply {
+/* .hero .info .btn-apply {
     font-family: var(--font-primary);
     font-weight: 500;
     font-size: 16px;
@@ -481,11 +481,66 @@ header {
     margin: 10px;
     color: #fff;
     border: 2px solid var(--color-primary);
+} */
+
+.all-btn-link {
+    text-transform: uppercase;
+    padding: 15px 30px;
+    /* font-size: 1.6rem; */
+    /* white-space: nowrap; */
+    display: inline-block;
+    /* border-radius: 90px; */
+    font-size: 2.2rem;
+
 }
 
-.hero .info .btn-apply:hover {
-    background: var(--color-primary);
+.btn-apply {
+    background-color: transparent;
+    /* border: 2px solid; */
+    margin: 10px auto;
+    position: relative;
+    /* overflow: hidden; */
+    z-index: 0;
+    padding: 18px 46px;
+    font-weight: bold;
+    letter-spacing: 6px;
 }
+
+.btn-apply:hover {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.btn-apply::before {
+    /* transition-duration: 0.5s; */
+    box-shadow: inset 0 0 0 3px white;
+    /* z-index: 0; */
+    font-weight: bold;
+}
+
+.btn-apply::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 119, 201, 0.4);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.4s ease;
+    /* border-radius: 90px; */
+    z-index: -1;
+}
+
+.btn-apply:hover::before {
+    box-shadow: inset 0 0 0 160px white;
+
+}
+
+
+
+/* .hero .info .btn-apply:hover {
+    background: var(--color-primary);
+} */
 
 .hero .carousel-control-prev {
     justify-content: start;
@@ -599,6 +654,9 @@ h3 {
 h3 strong {
     font-weight: 400;
 } */
+.wrap {
+    margin-bottom: 40px;
+}
 
 .countdown {
     width: 560px;
@@ -661,14 +719,19 @@ h3 strong {
     /* #hero h4 {
         font-size: 0.94em;
     } */
+    .countdown {
+        width: 345px;
+    }
+
     .countdown .bloc-time {
-        margin-right: 15px;
+        margin-right: 12px;
     }
 
     .countdown .figure {
         height: 46px;
-        width: 35px;
+        width: 36px;
     }
+
 
     .countdown .figure>span {
         font: normal 2.3em/45px "Lato";
