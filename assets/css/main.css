@@ -89,7 +89,7 @@ section:nth-child(even) {
 header {
     background-color: var(--primary-color);
     /* absolute to use z-index to put it over the hero.  */
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     right: 0;
@@ -576,7 +576,7 @@ h1 strong {
     color: #ea4c4c;
 }
 
-h2 {
+#hero h2 {
     /* margin-bottom: 10px;
     text-align: center; */
     font: 300 1em "Lato";
