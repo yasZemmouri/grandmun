@@ -865,6 +865,7 @@ h3 strong {
     background-position: bottom right;
     background-size: 200px;
     background-repeat: no-repeat;
+    filter: drop-shadow(-1px 4px 3px rgba(50, 50, 0, 0.4));
 }
 
 
@@ -880,6 +881,7 @@ h3 strong {
     /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
     /* circle(100px at 150px 150px); */
     /* -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%) circle(100px at 150px 150px); */
+
 }
 
 .invitation-container h2 {
