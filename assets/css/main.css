@@ -888,9 +888,23 @@ h3 strong {
     text-align: center;
 }
 
+.invitation-container h3 {
+    font-size: 2.4rem;
+    margin-bottom: 0.75em;
+}
+
+.invitation-container {
+    font-size: 2rem;
+}
+
 .invitation-container h3 span {
     color: var(--primary-color);
     font-weight: 700;
+}
+
+.invitation-container li,
+p {
+    margin-bottom: 0.75em;
 }
 
 #invitation .lycee-logo {
