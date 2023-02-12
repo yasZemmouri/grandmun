@@ -869,11 +869,13 @@ h3 strong {
 }
 
 
+
+
 .invitation-container {
     background-color: rgba(255, 255, 255, 0.918);
-    padding: 50px 25px 200px;
+    padding: 50px 35px 150px;
     max-width: 750px;
-    width: 80%;
+    width: 90%;
     margin: auto;
     /* margin-bottom: 50px; */
     clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
@@ -885,7 +887,7 @@ h3 strong {
 }
 
 .invitation-container h2 {
-    margin-bottom: 0.75em;
+    margin-bottom: 1.75em;
     color: var(--primary-color);
     text-align: center;
 }
@@ -910,10 +912,38 @@ p {
 }
 
 #invitation .lycee-logo {
-    width: 300px;
+    width: 250px;
     margin: auto;
-    margin-top: -80px;
+    margin-top: -60px;
     position: relative;
+}
+
+@media (max-width: 768px) {
+    #invitation .container-xl {
+        background-size: 100px;
+    }
+
+    #invitation .container-xl .invitation-container {
+        clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+    }
+
+    #invitation .invitation-container h2 {
+        font-size: 2.4rem;
+        /* color: green; */
+    }
+
+    #invitation h3 {
+        font-size: 2.2rem;
+    }
+
+    #invitation .lycee-logo {
+        width: 200px;
+    }
+
+    #invitation li,
+    #invitation p {
+        font-size: 1.8rem;
+    }
 }
 
 .lycee-logo img {
