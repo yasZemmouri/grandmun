@@ -883,6 +883,7 @@ h3 strong {
     /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
     /* circle(100px at 150px 150px); */
     /* -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%) circle(100px at 150px 150px); */
+    /* border-radius: 100% 100% 0% 0%; */
 
 }
 
