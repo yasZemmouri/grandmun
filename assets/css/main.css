@@ -65,7 +65,7 @@ h1 {
     font-weight: bold;
     margin-bottom: 0;
     text-transform: uppercase;
-    color: white;
+
 }
 
 h2 {
@@ -106,12 +106,20 @@ header {
     z-index: 5;
 }
 
+header h1 {
+    color: white;
+}
+
 
 
 /*----====== Desktop Navigation  =======----*/
 @media(min-width: 1280px) {
     .navbar {
         padding: 0
+    }
+
+    .navbar h1 {
+        color: white;
     }
 
     .navbar ul {
@@ -393,6 +401,7 @@ header {
     color: white;
 }
 
+#hero h1,
 #hero h2,
 #hero h3 {
     color: white;
