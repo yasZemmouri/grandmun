@@ -1064,6 +1064,7 @@ p {
 #committees .card-item p {
     color: var(--color-secondary);
     margin: 0;
+    margin-bottom: 0.75em;
 }
 
 /* SPC1  */
