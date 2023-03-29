@@ -1106,3 +1106,20 @@ p {
 article a {
     color: #216fff;
 }
+
+/* FAQ */
+#faq h1 {
+    padding-bottom: 10px;
+    border-bottom: solid lightgrey 2px;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+#faq a {
+    color: #216fff;
+    opacity: 0.8
+}
+
+#faq a:hover {
+    opacity: 1;
+}
