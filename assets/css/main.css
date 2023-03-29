@@ -986,10 +986,13 @@ p {
     position: relative;
     border-radius: 0;
     height: 100%;
-    max-height: 600px;
     overflow-y: auto;
     overflow-x: hidden;
 }
+
+
+
+
 
 #committees .card-item a:hover {
     color: var(--secondary-color)
@@ -1081,6 +1084,22 @@ p {
     color: var(--color-secondary);
     margin: 0;
     margin-bottom: 0.75em;
+}
+
+@media (min-width: 992px) {
+    #committees .card-item {
+        max-height: 600px;
+    }
+}
+
+@media (max-width: 1200px) {
+    #committees .card-item {
+        max-height: none;
+    }
+
+    #committees .card-item .card-bg {
+        height: auto;
+    }
 }
 
 /* SPC1  */
