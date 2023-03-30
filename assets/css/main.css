@@ -23,6 +23,8 @@
     /* Font */
     --font-primary: "", sans-serif;
     --font-secondary: "", sans-serif;
+    /* Dimensions */
+    --nav-height: 55px;
 }
 
 
@@ -102,7 +104,7 @@ header {
     left: 0;
     top: 0;
     right: 0;
-    height: 55px;
+    height: var(--nav-height);
     /* color: white; */
     /* padding-right: 10px; */
     /* why???*/
@@ -1103,8 +1105,8 @@ p {
 }
 
 .banner {
-    height: 550px;
-    background-position: left;
+    height: 500px;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -1157,4 +1159,49 @@ article a {
 
 #faq a:hover {
     opacity: 1;
+}
+
+/* Apply  */
+.header-spacer {
+    height: var(--nav-height);
+}
+
+#apply iframe {
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 780px;
+    height: 1200px;
+}
+
+/* ============== Senegal =============*/
+#senegal .frame-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* width: 560px; */
+    /* height: 315px; */
+    /* max-width: 100%; */
+    height: 0;
+}
+
+#senegal p {
+    margin-bottom: 2em;
+}
+
+#senegal .frame-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*============== Guide ==================*/
+#guide h1 {
+    color: #004AAD;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)
+}
+
+#guide section {
+    background-color: inherit;
 }
