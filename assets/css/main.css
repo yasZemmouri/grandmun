@@ -1205,3 +1205,31 @@ article a {
 #guide section {
     background-color: inherit;
 }
+
+.btn-download {
+    background-color: #FA7929;
+    /* border: 2px solid; */
+    margin: 10px auto;
+    position: relative;
+    /* overflow: hidden; */
+    z-index: 0;
+    padding: 18px 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.btn-download i {
+    font-size: 1.8em;
+    vertical-align: middle;
+}
+
+.face-primary {
+    background-color: ;
+}
+
+.face-secondary {
+    font-size: 0.8em;
+    letter-spacing: 0;
+    background-color: transparent;
+}
