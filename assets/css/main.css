@@ -1286,3 +1286,8 @@ article a {
 .face-button:hover .face-primary {
     margin-top: calc(-1 * var(--height));
 }
+
+#ecosoc .face-button:last-child {
+    --accentColor: #BA2132;
+    ;
+}
