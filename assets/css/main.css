@@ -1137,8 +1137,45 @@ p {
 }
 
 /* SPC1  */
-article a {
-    color: #216fff;
+#spc1 h1 {
+    color: #004AAD;
+    color: black;
+}
+
+#spc1 .banner {
+    background-position: center -70px;
+    height: 550px;
+}
+
+#spc1 .face-button {
+    --accentColor: #526B6C;
+}
+
+@media(max-width: 1120px) {
+    #spc1 .banner {
+        background-position: center center;
+        height: 500px;
+    }
+
+}
+
+/*==================== SPC2 =====================*/
+#spc2 .face-button {
+    --accentColor: #97b6ce;
+
+}
+
+#spc2 .banner {
+    background-position: center -210px;
+    height: 550px;
+}
+
+@media(max-width: 1621px) {
+    #spc2 .banner {
+        background-position: center center;
+        height: 500px;
+    }
+
 }
 
 /* FAQ */
