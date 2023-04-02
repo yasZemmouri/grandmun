@@ -80,6 +80,15 @@ h2 {
 
 }
 
+main p a {
+    color: var(--primary-color);
+    opacity: 0.8;
+}
+
+main p a:hover {
+    opacity: 1;
+}
+
 
 
 /* Section & Section Header  */
@@ -977,7 +986,14 @@ p {
     bottom: 0;
 }
 
-/* Committees  */
+/*======================== Guests Speakers==================== */
+#guest h3 {
+    font-size: 1.4em;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*==================== Committees =======================*/
 #committees h2 {
     text-align: center;
     padding-bottom: 70px;
