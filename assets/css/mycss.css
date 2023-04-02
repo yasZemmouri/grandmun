@@ -5,6 +5,11 @@
     box-sizing: inherit;
 }
 
+*::selection {
+    background-color: #BA2132;
+    color: white;
+}
+
 :root {
     box-sizing: border-box;
     font-size: 62.5%;
