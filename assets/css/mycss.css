@@ -6,7 +6,8 @@
 }
 
 *::selection {
-    background-color: #BA2132;
+    --accentColor: #BA2132;
+    background-color: var(--accentColor);
     color: white;
 }
 
@@ -245,7 +246,7 @@ header h1 {
     }
 
     .navbar .dropdown ul a:hover,
-    .navbar .dropdown ul .active:hover,
+    /* .navbar .dropdown ul .active:hover, */
     .navbar .dropdown ul li:hover>a {
         color: var(--secondary-color);
         font-weight: 600;
@@ -356,6 +357,13 @@ header h1 {
 
     .navbar .dropdown ul a {
         color: var(--text-color)
+    }
+
+    .navbar .dropdown ul a:hover,
+    .navbar .dropdown ul .active:hover,
+    .navbar .dropdown ul li:hover>a {
+        color: var(--secondary-color);
+        font-weight: 600;
     }
 
     .navbar .dropdown>.dropdown-active,
@@ -1169,7 +1177,8 @@ p {
     height: 550px;
 }
 
-#spc1 .face-button {
+#spc1 .face-button,
+#spc1 *::selection {
     --accentColor: #526B6C;
 }
 
@@ -1182,8 +1191,9 @@ p {
 }
 
 /*==================== SPC2 =====================*/
-#spc2 .face-button {
-    --accentColor: #749ebe;
+#spc2 .face-button,
+#spc2 *::selection {
+    --accentColor: #6392b6;
 
 }
 
@@ -1259,6 +1269,12 @@ p {
 /*========================= HRC ==============================*/
 #hrc h2 {
     max-width: 900px;
+}
+
+#hrc .face-button,
+#hrc *::selection {
+    --accentColor: #0080C0;
+
 }
 
 blockquote {
