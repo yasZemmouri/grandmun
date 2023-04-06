@@ -247,28 +247,31 @@ var Countdown = {
         $back_bottom.find('span').html(value);
 
         // Then animate
-        TweenMax.to($top, 0.8, {
-            rotationX: '-180deg',
-            transformPerspective: 300,
-            ease: Quart.easeOut,
-            onComplete: function () {
+        if (document.getElementById('hero')) {
+            TweenMax.to($top, 0.8, {
+                rotationX: '-180deg',
+                transformPerspective: 300,
+                ease: Quart.easeOut,
+                onComplete: function () {
 
-                $top.html(value);
+                    $top.html(value);
 
-                $bottom.html(value);
+                    $bottom.html(value);
 
-                TweenMax.set($top, {
-                    rotationX: 0
-                });
-            }
-        });
+                    TweenMax.set($top, {
+                        rotationX: 0
+                    });
+                }
+            });
 
-        TweenMax.to($back_top, 0.8, {
-            rotationX: 0,
-            transformPerspective: 300,
-            ease: Quart.easeOut,
-            clearProps: 'all'
-        });
+            TweenMax.to($back_top, 0.8, {
+                rotationX: 0,
+                transformPerspective: 300,
+                ease: Quart.easeOut,
+                clearProps: 'all'
+            });
+        }
+
     },
 
     checkDay: function (value, $el_1, $el_2) {
