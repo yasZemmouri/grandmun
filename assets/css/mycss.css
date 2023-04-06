@@ -87,11 +87,12 @@ h2 {
 
 main p a {
     color: var(--primary-color);
-    opacity: 0.8;
+    opacity: 0.75;
 }
 
 main p a:hover {
     opacity: 1;
+    text-decoration: underline;
 }
 
 
@@ -107,7 +108,7 @@ article {
 /* section .container-xl {
     background-color: white;
 } */
-section:nth-child(even) {
+section:nth-child(odd) {
     background-color: white;
 }
 
