@@ -4,11 +4,11 @@ const heroEl = document.getElementById('hero');
 // Mobile nav toggle
 const mobileNavShowEl = document.querySelector('.mobile-nav-show');
 const mobileNavHideEl = document.querySelector('.mobile-nav-hide');
-console.log(document.querySelectorAll('.mobile-nav-toggle'));
+// console.log(document.querySelectorAll('.mobile-nav-toggle'));
 const mobileNavBtnEl = document.querySelectorAll('.mobile-nav-toggle');
-console.log(mobileNavBtnEl);
+// console.log(mobileNavBtnEl);
 mobileNavBtnEl.forEach(element => {
-    console.log(element);
+    // console.log(element);
     element.addEventListener('click', function () {
         mobileNavToggle();
 
@@ -62,8 +62,8 @@ window.addEventListener("scroll", function () {
     if (heroEl) {
         heroEl.style.backgroundPositionY = offset * 0.5 + "px";
     }
-    console.log('offset: ' + offset);
-    console.log('position: ' + offset * 0.5);
+    // console.log('offset: ' + offset);
+    // console.log('position: ' + offset * 0.5);
 })
 
 /**
