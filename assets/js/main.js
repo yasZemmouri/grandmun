@@ -104,10 +104,14 @@ let x = setInterval(function () {
         const minutes = Math.floor((distance % (60 * 60)) / (60));
         const seconds = Math.floor((distance % (60)));
         //Display Result
-        daysEl.textContent = days;
-        hoursEl.textContent = ('0' + hours).slice(-2);
-        minutesEl.textContent = ('0' + minutes).slice(-2);
-        secondsEl.textContent = ('0' + seconds).slice(-2);
+        if (daysEl && hoursEl && minutesEl && secondsEl) {
+            daysEl.textContent = days;
+            hoursEl.textContent = ('0' + hours).slice(-2);
+            minutesEl.textContent = ('0' + minutes).slice(-2);
+            secondsEl.textContent = ('0' + seconds).slice(-2);
+        }
+
+
     } else countdownEl.remove();
 }, 1000);
 
