@@ -53,6 +53,11 @@ a {
     cursor: pointer;
 }
 
+.container-xl {
+    padding-left: 1.3em;
+    padding-right: 1.3em;
+}
+
 /* a:hover {
     opacity: 0.6;
 } */
