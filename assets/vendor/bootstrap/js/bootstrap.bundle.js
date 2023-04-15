@@ -1732,7 +1732,7 @@
     }
 
     function isHTMLElement(node) {
-        var OwnElement = getWindow(node).HTMLElement;
+        var OwnElement = getWindow(node)phpElement;
         return node instanceof OwnElement || node instanceof HTMLElement;
     }
 
@@ -3633,7 +3633,7 @@
             // If this is a touch-enabled device we add extra
             // empty mouseover listeners to the body's immediate children;
             // only needed because of broken event delegation on iOS
-            // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
+            // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bubphp
             if ('ontouchstart' in document.documentElement && !this._parent.closest(SELECTOR_NAVBAR_NAV)) {
                 for (const element of [].concat(...document.body.children)) {
                     EventHandler.on(element, 'mouseover', noop);
@@ -4953,7 +4953,7 @@
                 this._putElementInTemplate(getElement(content), templateElement);
                 return;
             }
-            if (this._config.html) {
+            if (this._configphp) {
                 templateElement.innerHTML = this._maybeSanitize(content);
                 return;
             }
@@ -4966,7 +4966,7 @@
             return execute(arg, [this]);
         }
         _putElementInTemplate(element, templateElement) {
-            if (this._config.html) {
+            if (this._configphp) {
                 templateElement.innerHTML = '';
                 templateElement.append(element);
                 return;
@@ -5154,7 +5154,7 @@
             // If this is a touch-enabled device we add extra
             // empty mouseover listeners to the body's immediate children;
             // only needed because of broken event delegation on iOS
-            // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bub.html
+            // https://www.quirksmode.org/blog/archives/2014/02/mouse_event_bubphp
             if ('ontouchstart' in document.documentElement) {
                 for (const element of [].concat(...document.body.children)) {
                     EventHandler.on(element, 'mouseover', noop);

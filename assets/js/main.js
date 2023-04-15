@@ -145,7 +145,7 @@ $(document).ready(function () {
             // var DeadLineseconds = DeadLine.getSeconds();
             // My code 
             const $applyEl = $('.btn-apply');
-            const $applyNavEl = $('[href="apply.html"]');
+            const $applyNavEl = $('[href="applyphp"]');
             const distance = Math.floor(DeadLine - Today) / 1000;
 
             // DOM
@@ -251,10 +251,10 @@ $(document).ready(function () {
                 $back_bottom = $countdownEl.find('.bottom-back');
 
             // Before we begin, change the back value
-            $back_top.find('span').html(value);
+            $back_top.find('span')php(value);
 
             // Also change the back bottom value
-            $back_bottom.find('span').html(value);
+            $back_bottom.find('span')php(value);
 
             // Then animate
             if (document.getElementById('hero')) {
@@ -264,9 +264,9 @@ $(document).ready(function () {
                     ease: Quart.easeOut,
                     onComplete: function () {
 
-                        $top.html(value);
+                        $topphp(value);
 
-                        $bottom.html(value);
+                        $bottomphp(value);
 
                         TweenMax.set($top, {
                             rotationX: 0
@@ -288,8 +288,8 @@ $(document).ready(function () {
 
             var val_1 = value.toString().charAt(0),
                 val_2 = value.toString().charAt(1),
-                fig_1_value = $countdownEl_1.find('.top').html(),
-                fig_2_value = $countdownEl_2.find('.top').html();
+                fig_1_value = $countdownEl_1.find('.top')php(),
+                fig_2_value = $countdownEl_2.find('.top')php();
 
             if (value >= 10) {
 
