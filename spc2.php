@@ -57,8 +57,7 @@
                     </a></div>
             </div>
     </main><!-- End Main -->
-    <footer>
-    </footer><!-- End Footer -->
+    <?php include 'footer.php'; ?><!-- End Footer -->
     <!-- Vendor js file -->
     <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
     <!-- Main js File -->
