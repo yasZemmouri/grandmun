@@ -421,7 +421,7 @@ header h1 {
     /* overflow-x: hidden; */
     /* padding: 0; */
     /* what is this? */
-    background: url(../img/DJI_0232.JPG) rgba(0, 119, 201, 0.5);
+    background: url(../img/DJI_0232.webp) rgba(0, 119, 201, 0.5);
     /* what is this?  */
     background-blend-mode: multiply;
     min-height: 100vh;
