@@ -1412,8 +1412,18 @@ blockquote cite {
 
 /* footer */
 footer .container-xl {
-    line-height: 60px;
+    min-height: 70px;
     border-top: 1px solid grey;
     font-size: 1.6rem;
     color: grey;
+}
+
+
+footer a {
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--secondary-color);
 }
