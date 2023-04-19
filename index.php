@@ -29,7 +29,7 @@
 </head>
 
 <body>
-<?php include 'navbar.php'; ?><!-- End Header -->
+<?php include 'includes/navbar.php'; ?><!-- End Header -->
     <!---------------- Hero Section ------------------->
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="info d-flex align-items-center">
@@ -412,7 +412,7 @@
             </div>
         </section>End ECS Section -->
     </main><!-- End Main -->
-    <?php include 'footer.php'; ?><!-- End Footer -->
+    <?php include 'includes/footer.php'; ?><!-- End Footer -->
     <!-- Vendor js file -->
     <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
     <!-- Main js File -->

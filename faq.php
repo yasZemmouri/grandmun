@@ -30,7 +30,7 @@
 </head>
 
 <body>
-<?php include 'navbar.php'; ?><!-- End Header -->
+<?php include 'includes/navbar.php'; ?><!-- End Header -->
     <main id="faq">
         <!-- ======= FAQ ======= -->
         <section id="questions">
@@ -100,7 +100,7 @@
             </div>
         </section>
     </main><!-- End Main -->
-    <?php include 'footer.php'; ?><!-- End Footer -->
+    <?php include 'includes/footer.php'; ?><!-- End Footer -->
     <!-- Vendor js file -->
     <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
     <!-- Main js File -->

@@ -30,7 +30,7 @@
 </head>
 
 <body>
-<?php include 'navbar.php'; ?><!-- End Header -->
+<?php include 'includes/navbar.php'; ?><!-- End Header -->
     <div class="header-spacer"></div>
     <main id="spc2">
         <div class="banner"
@@ -57,7 +57,7 @@
                     </a></div>
             </div>
     </main><!-- End Main -->
-    <?php include 'footer.php'; ?><!-- End Footer -->
+    <?php include 'includes/footer.php'; ?><!-- End Footer -->
     <!-- Vendor js file -->
     <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
     <!-- Main js File -->

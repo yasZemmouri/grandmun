@@ -30,7 +30,7 @@
 </head>
 
 <body>
-<?php include 'navbar.php'; ?><!-- End Header -->
+<?php include 'includes/navbar.php'; ?><!-- End Header -->
     <div class="header-spacer"></div>
     <main id="spc1">
         <div class="banner" style="background-image: url(assets/img/pexels-kindel-media-9028921.webp);">
@@ -73,7 +73,7 @@
             </div>
         </section>
     </main><!-- End Main -->
-    <?php include 'footer.php'; ?><!-- End Footer -->
+    <?php include 'includes/footer.php'; ?><!-- End Footer -->
     <!-- Vendor js file -->
     <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
     <!-- Main js File -->
