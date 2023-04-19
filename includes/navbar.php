@@ -10,10 +10,11 @@
             <nav class="navbar">
                    <?php
                     $current_url = $_SERVER['REQUEST_URI'];
+                    //a superglobal variable that contains the virtual path of the current script file.
                     $script_name= $_SERVER['SCRIPT_NAME'];
                 ?>
                 <ul>
-             
+             <!-- strpos() string position. returns string position of false if not found -->
                 <li><a href="/" <?php if (strpos($script_name, 'index.php') !== false) { echo 'class="active"'; } ?>>Home</a></li>
                 <li><a href="faq.php" <?php if (strpos($current_url, 'faq.php') !== false) { echo 'class="active"'; } ?>>FAQ</a></li>
                 <li><a href="senegal.php" <?php if (strpos($current_url, 'senegal.php') !== false) { echo 'class="active"'; } ?>>senegal project</a></li>
