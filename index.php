@@ -252,7 +252,7 @@
                                 </div>
                                 <div class="col-xl-7 d-flex align-items-center">
                                     <div class="card-body">
-                                        <a href="spc1php">
+                                        <a href="spc1.php">
                                             <h3 class="card-title"> Special Conference 1 </h3>
                                         </a>
                                         <p>Artificial Intelligence (AI) has the potential to improve the health and
@@ -277,7 +277,7 @@
                                 </div>
                                 <div class="col-xl-7 d-flex align-items-center">
                                     <div class="card-body">
-                                        <a href="spc2php">
+                                        <a href="spc2.php">
                                             <h3 class="card-title"> Special Conference 2</h3>
                                         </a>
                                         <p>The Soviet Union was dissolved more than 30 years ago. In its wake, the Union
@@ -303,7 +303,7 @@
                                 </div>
                                 <div class="col-xl-7 d-flex align-items-center">
                                     <div class="card-body">
-                                        <a href="ecosocphp">
+                                        <a href="ecosoc.php">
                                             <h3 class="card-title"> Economic and Social Council </h3>
                                         </a>
                                         <p>With the rapid technological advancement of recent years, computers are
@@ -338,7 +338,7 @@
                                 </div>
                                 <div class="col-xl-7 d-flex align-items-center">
                                     <div class="card-body">
-                                        <a href="hrcphp">
+                                        <a href="hrc.php">
                                             <h3 class="card-title">HRC</h3>
                                         </a>
                                         <p>The issue of statelessness is usually portrayed as an "invisible problem" in
