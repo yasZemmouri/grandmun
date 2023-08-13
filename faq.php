@@ -2,7 +2,11 @@
 <html lang="en">
 
 <!-- Head -->
-<?php include 'includes/head.php'; ?><!-- End Head -->
+<?php
+$h1 = 'Frequently Asked Questions (FAQ)';
+$h2 = '';
+$title = ($h1 && $h2) ? "$h1. $h2" : ($h1 ? $h1 : ucfirst(basename($_SERVER['REQUEST_URI'])));
+include 'includes/head.php'; ?><!-- End Head -->
 
 <body>
 <?php include 'includes/navbar.php'; ?><!-- End Header -->
@@ -10,7 +14,7 @@
         <!-- ======= FAQ ======= -->
         <section id="questions">
             <div class='container-xl'>
-                <h1>Frequently Asked Questions (FAQ)</h1>
+                <h1><?php echo $h1;?></h1>
                 <h2>What do I wear? </h2>
                 <p>In MUN, we like to look sharp, which is why here at GRANDMUN, we impose a dress code that you should
                     go by when on D-Day. For men : a <strong>business-type suit</strong>, preferably with a tie. For
@@ -29,7 +33,7 @@
                     by NDG, aiming to fly a few students to Senegal in the summer of 2023 to <strong>build a
                         library</strong> in the city of Pikine <!--what's Pikine-->. For more information about the
                     project and the reason we humbly impose a fee to your attendance, please refer to the <strong><a
-                            href="senegalphp">explanatory video</a></strong> on the present website.
+                            href="senegal.php">explanatory video</a></strong> on the present website.
                     <!-- Link to the explanatory video about payements  -->
                 </p>
                 <h2>How to conduct efficient and useful research?</h2>

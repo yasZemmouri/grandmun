@@ -2,7 +2,11 @@
 <html lang="en">
 
 <!-- Head -->
-<?php include 'includes/head.php'; ?><!-- End Head -->
+<?php
+$h1 = 'Delegate Guides';
+$h2 = '';
+$title = ($h1 && $h2) ? "$h1. $h2" : ($h1 ? $h1 : ucfirst(basename($_SERVER['REQUEST_URI'])));
+include 'includes/head.php'; ?><!-- End Head -->
 
 <body>
 <?php include 'includes/navbar.php'; ?><!-- End Header -->
@@ -12,7 +16,7 @@
     <main id="guide">
         <div class="banner" style="background-image: url(assets/img/Untitled2.webp);">
             <div class="container-xl">
-                <h1>Delegate Guides</h1>
+                <h1><?php echo $h1;?></h1>
             </div>
         </div>
         <section id='delegate-guide'>

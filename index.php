@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Head -->
-<?php include 'includes/head.php'; ?><!-- End Head -->
+<?php
+$h1 = "Model United Nations Simulation";
+$h2='';
+$title = ($h1 && $h2) ? "$h1. $h2" : ($h1 ? $h1 : ucfirst(basename($_SERVER['REQUEST_URI'])));
+include 'includes/head.php'; ?><!-- End Head -->
 <body>
 <?php include 'includes/navbar.php'; ?><!-- End Header -->
     <!---------------- Hero Section ------------------->
@@ -10,7 +14,8 @@
         <div class="container-xl">
             <div class="row justify-content-center">
                 <div class="col-lg-12 text-center">
-                    <h2><span>GRANDMUN</span></h2>
+                    <!-- <h2><span>GRANDMUN</span></h2> -->
+                    <img id='logo-hero' src="assets/img/channels4_profile1.png" alt="Grandmun Logo">
                     <!-- <h3 id="countdown">
                         <span id="days">00</span> : <span id="hours">00</span> : <span id="minutes">00</span> : <span
                             id="seconds">00</span>

@@ -2,7 +2,9 @@
 <html lang="en">
 
 <!-- Head -->
-<?php include 'includes/head.php'; ?><!-- End Head -->
+<?php include 
+$title = ($h1 && $h2) ? "$h1. $h2" : ($h1 ? $h1 : ucfirst(basename($_SERVER['REQUEST_URI'])));
+include 'includes/head.php'; ?><!-- End Head -->
 <body>
     <?php include 'includes/navbar.php'; ?><!-- End Header -->
     <div class="header-spacer"></div>

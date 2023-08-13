@@ -2,7 +2,11 @@
 <html lang="en">
 
 <!-- Head -->
-<?php include 'includes/head.php'; ?><!-- End Head -->
+<?php
+$h1= 'Special Conference 1';
+$h2= 'The militarization of artificial intelligence';
+$title = ($h1 && $h2) ? "$h1. $h2" : ($h1 ? $h1 : ucfirst(basename($_SERVER['REQUEST_URI'])));
+include 'includes/head.php'; ?><!-- End Head -->
 
 <body>
 <?php include 'includes/navbar.php'; ?><!-- End Header -->
@@ -10,12 +14,12 @@
     <main id="spc1">
         <div class="banner" style="background-image: url(assets/img/pexels-kindel-media-9028921.webp);">
             <div class="container-xl">
-                <h1>Special Conference 1</h1>
+                <h1><?php echo $h1?></h1>
             </div>
         </div>
         <section id='militarization'>
             <div class='container-xl'>
-                <h2>The militarization of artificial intelligence</h2>
+                <h2><?php echo $h2?></h2>
                 <p>The rapid pace at which technology advances today is, in many ways, a double-edged sword. The 21st
                     century has seen many controversial technological and scientific debates draw worldwide attention -
                     none of which are more relevant than artificial intelligence.</p>

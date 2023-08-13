@@ -2,7 +2,11 @@
 <html lang="en">
 
 <!-- Head -->
-<?php include 'includes/head.php'; ?><!-- End Head -->
+<?php
+$h1 = 'economic and social council';
+$h2 = 'Countering Unemployment Caused by Automation';
+$title = ($h1 && $h2) ? "$h1. $h2" : ($h1 ? $h1 : ucfirst(basename($_SERVER['REQUEST_URI'])));
+include 'includes/head.php'; ?><!-- End Head -->
 
 <body>
 <?php include 'includes/navbar.php'; ?><!-- End Header -->
@@ -16,12 +20,12 @@
         </div> -->
         <div class="banner" style="background-image: url(assets/img/image_1365534802.webp); background-position: left;">
             <div class="container-xl">
-                <h1>Economic and Social Council</h1>
+                <h1><?php echo $h1;?></h1>
             </div>
         </div>
         <section id="intro">
             <div class='container-xl'>
-                <h2>Countering Unemployment Caused by Automation</h2>
+                <h2><?php echo $h2;?></h2>
                 <p>1965, philosophy professor Hubert Dreyfus, a staunch critic of artificial intelligence, boldly
                     claimed that a machine would never beat a human at the game of chess. It would only be two years
                     before the sceptical scholar was himself checkmated by an MIT-developed computer. </p>

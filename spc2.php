@@ -2,7 +2,11 @@
 <html lang="en">
 
 <!-- Head -->
-<?php include 'includes/head.php'; ?><!-- End Head -->
+<?php 
+$h1='Special Conference 2';
+$h2='Confirming the sovereignty of former Soviet states';
+$title = ($h1 && $h2) ? "$h1. $h2" : ($h1 ? $h1 : ucfirst(basename($_SERVER['REQUEST_URI'])));
+include 'includes/head.php'; ?><!-- End Head -->
 
 <body>
 <?php include 'includes/navbar.php'; ?><!-- End Header -->
@@ -11,12 +15,12 @@
         <div class="banner"
             style="background-image: url(assets/img/fountain-of-friendship-of-peoples-1630446_1920.webp)">
             <div class="container-xl">
-                <h1>Special Conference 2</h1>
+                <h1><?php echo $h1?></h1>
             </div>
         </div>
         <section id='militarization'>
             <div class='container-xl'>
-                <h2>Confirming the sovereignty of former Soviet states</h2>
+                <h2><?php echo $h2?></h2>
                 <p>The Soviet Union was dissolved more than 30 years ago. In its wake, the Union of Soviet Socialist
                     Republics (USSR), produced 15 sovereign states. These states included: Armenia, Azerbaijan, Belarus,
                     Estonia, Georgia, Kazakhstan, Kyrgyzstan, Latvia, Lithuania, Moldova, Russia, Tajikistan,

@@ -19,7 +19,7 @@
                 <li><a href="faq.php" <?php if (strpos($current_url, 'faq.php') !== false) { echo 'class="active"'; } ?>>FAQ</a></li>
                 <li><a href="senegal.php" <?php if (strpos($current_url, 'senegal.php') !== false) { echo 'class="active"'; } ?>>senegal project</a></li>
                 <li><a href="guide.php" <?php if (strpos($current_url, 'guide.php') !== false) { echo 'class="active"'; } ?>>delegate guides</a></li>
-                <li class="dropdown"><a href="#"><span>Committees</span> <i
+                <li class="dropdown"><a href="javascript:void(0);"><span>Committees</span> <i
                                 class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
                             <li><a href="ecosoc.php" <?php if (strpos($current_url, 'ecosoc.php') !== false) { echo 'class="active"'; } ?>>ECOSOC</a></li>
