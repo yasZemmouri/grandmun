@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Unlock Your Online Success: AlgoFairy Delivers Creative Web Solutions. From Design/Development to Marketing & SEO, Elevate Your Digital Journey.">
+        content="Experience the diplomatic work of UN delegates and improve your communication skills at GRANDMUN - the first official Model United Nations conference hosted by Lycée Notre-Dame du Grandchamp. This student-led, non-profit conference takes place annually in Versailles, offering a memorable day of debating and a chance to broaden your horizons.">
     <!--===== Favicons =====-->
     <link rel="icon" type="image/x-icon" href="assets/img/favicon-32-2.ico">
     <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicon-160.png">
