@@ -11,6 +11,9 @@ include 'includes/head.php'; ?><!-- End Head -->
     <!---------------- Hero Section ------------------->
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="info d-flex align-items-center">
+        <?php
+            include 'formProcessor.php';
+        ?>
         <div class="container-xl">
             <div class="row justify-content-center">
                 <div class="col-lg-12 text-center">

@@ -40,7 +40,7 @@
                     </li>
                     <?php
                         $now = time();
-                        $deadline = strtotime("2023-04-14 08:00:00");
+                        $deadline = strtotime("2023-10-14 08:00:00");
                         if($deadline > $now) {
                             if (strpos($current_url, 'apply.php') !== false) { echo '<li><a href="apply.php" class="active">apply</a></li>'; }
                             echo '<li><a href="apply.php">apply</a></li>';}
