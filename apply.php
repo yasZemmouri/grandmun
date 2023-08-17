@@ -2,7 +2,9 @@
 <html lang="en">
 
 <!-- Head -->
-<?php include 
+<?php
+$h1 = '';
+$h2 = '';
 $title = ($h1 && $h2) ? "$h1. $h2" : ($h1 ? $h1 : ucfirst(basename($_SERVER['REQUEST_URI'])));
 include 'includes/head.php'; ?><!-- End Head -->
 <body>

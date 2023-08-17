@@ -442,6 +442,12 @@ header h1 {
     color: white;
 }
 
+#logo-hero {
+    display: block;
+    margin: 40px auto;
+    user-select: none;
+}
+
 
 /* .hero .carousel {
     width: 100%;

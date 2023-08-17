@@ -1,3 +1,6 @@
+<?php
+    include 'includes/config.php';
+?>
 <header class="d-flex align-items-center">
         <div class="container-xl d-flex align-items-center justify-content-between">
             <a href="/">
@@ -39,8 +42,7 @@
                         </ul>
                     </li>
                     <?php
-                        $now = time();
-                        $deadline = strtotime("2023-10-14 08:00:00");
+                        
                         if($deadline > $now) {
                             if (strpos($current_url, 'apply.php') !== false) { echo '<li><a href="apply.php" class="active">apply</a></li>'; }
                             echo '<li><a href="apply.php">apply</a></li>';}

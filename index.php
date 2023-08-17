@@ -16,7 +16,7 @@ include 'includes/head.php'; ?><!-- End Head -->
         ?>
         <div class="container-xl">
             <div class="row justify-content-center">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12 text-center" style="user-select: none;">
                     <!-- <h2><span>GRANDMUN</span></h2> -->
                     <img id='logo-hero' src="assets/img/channels4_profile1.png" alt="Grandmun Logo">
                     <!-- <h3 id="countdown">
