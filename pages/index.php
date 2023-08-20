@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Head -->
 <?php
+//Markup Elements Variables
 $h1 = "Model United Nations Simulation";
 $h2='';
-$title = ($h1 && $h2) ? "$h1. $h2" : ($h1 ? $h1 : ucfirst(basename($_SERVER['REQUEST_URI'])));
-include '../includes/head.php'; ?><!-- End Head -->
+//Title
+include "../includes/functions.php";
+$title = generateTitle($h1, $h2);
+?>
+<!-- HEAD -->
+<?php include '../includes/head.php';?> <!-- End Head -->
 <body>
 <?php include '../includes/navbar.php'; ?><!-- End Header -->
     <!---------------- Hero Section ------------------->
