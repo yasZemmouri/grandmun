@@ -241,7 +241,7 @@ header h1 {
     .navbar .dropdown ul a {
         padding: 10px 20px;
         font-size: 15px;
-        text-transform: none;
+        /* text-transform: none; */
         color: var(--color-default);
         font-weight: 400;
     }

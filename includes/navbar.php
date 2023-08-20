@@ -1,5 +1,21 @@
 <?php
+    // To use $deadline and $now 
     include 'config.php';
+    // Navbar Links Variables
+    $navbarLinks = array(
+        "Home" => "index.php",
+        "faq"=> "faq.php",
+        "senegal project" => "senegal.php",
+        'delegate guides' => "guide.php",
+        "Committees"=> [
+            "ecosoc" => "ecosoc.php",
+            "spc 1" => "spc1.php",
+            "spc 2" => "spc2.php",
+            "HRC" => "hrc.php"
+        ]
+        // 'apply' => 'apply.php'
+    )
+
 ?>
 <header class="d-flex align-items-center">
         <div class="container-xl d-flex align-items-center justify-content-between">
@@ -12,39 +28,37 @@
             <i class="mobile-nav-toggle mobile-nav-hide d-none  bi bi-x"></i>
             <nav class="navbar">
                    <?php
-                    $current_url = $_SERVER['REQUEST_URI'];
+                   //This variable provides the complete URL of the current page.
+                    // $current_url = $_SERVER['REQUEST_URI'];
                     //a superglobal variable that contains the virtual path of the current script file.
                     $script_name= $_SERVER['SCRIPT_NAME'];
+                    
                 ?>
                 <ul>
-             <!-- strpos() string position. returns string position of false if not found -->
-                <li><a href="/" <?php if (strpos($script_name, 'index.php') !== false) { echo 'class="active"'; } ?>>Home</a></li>
-                <li><a href="../pages/faq.php" <?php if (strpos($current_url, 'faq.php') !== false) { echo 'class="active"'; } ?>>FAQ</a></li>
-                <li><a href="../pages/senegal.php" <?php if (strpos($current_url, 'senegal.php') !== false) { echo 'class="active"'; } ?>>senegal project</a></li>
-                <li><a href="../pages/guide.php" <?php if (strpos($current_url, 'guide.php') !== false) { echo 'class="active"'; } ?>>delegate guides</a></li>
-                <li class="dropdown"><a href="javascript:void(0);"><span>Committees</span> <i
-                                class="bi bi-chevron-down dropdown-indicator"></i></a>
-                        <ul>
-                            <li><a href="../pages/ecosoc.php" <?php if (strpos($current_url, 'ecosoc.php') !== false) { echo 'class="active"'; } ?>>ECOSOC</a></li>
-                            <!-- <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
-                                        class="bi bi-chevron-down dropdown-indicator"></i></a>
-                                <ul>
-                                    <li><a href="#">Deep Dropdown 1</a></li>
-                                    <li><a href="#">Deep Dropdown 2</a></li>
-                                    <li><a href="#">Deep Dropdown 3</a></li>
-                                    <li><a href="#">Deep Dropdown 4</a></li>
-                                    <li><a href="#">Deep Dropdown 5</a></li>
-                                </ul>
-                            </li> -->
-                            <li><a href="../pages/spc1.php" <?php if (strpos($current_url, 'spc1.php') !== false) { echo 'class="active"'; } ?>>SPC 1</a></li>
-                            <li><a href="../pages/spc2.php" <?php if (strpos($current_url, 'spc2.php') !== false) { echo 'class="active"'; } ?>>SPC 2</a></li>
-                            <li><a href="../pages/hrc.php" <?php if (strpos($current_url, 'hrc.php') !== false) { echo 'class="active"'; } ?>>HRC</a></li>
-                        </ul>
-                    </li>
+                    <?php
+                    foreach($navbarLinks as $title=>$url){
+                        if(is_array($url)){
+                            //Handle dropdown menu
+                            echo '<li class="dropdown"><a href="javascript:void(0);"><span>Committees</span> <i
+                            class="bi bi-chevron-down dropdown-indicator"></i></a>';
+                            echo '<ul>';
+                            foreach($url as $subTitle => $subUrl){
+                            echo "<li><a href=$subUrl> $subTitle </a></li>";
+                            }
+                            echo '</ul>';
+                            echo '</li>';
+                        } else{
+                            $activeClass = (strpos($script_name, $url) !== false) ? 'class="active"': '';
+                            echo "<li><a href=$url $activeClass> $title </a></li>";
+                        }
+                    }
+                    ?>
+
+             <!-- strpos() string position. returns string position or false if not found. if the position is 0 ==true is not going to work --> 
                     <?php
                         
                         if($deadline > $now) {
-                            if (strpos($current_url, 'apply.php') !== false) { echo '<li><a href="../pages/apply.php" class="active">apply</a></li>'; }
+                            if (strpos($script_name, 'apply.php') !== false) { echo '<li><a href="../pages/apply.php" class="active">apply</a></li>'; }
                             echo '<li><a href="../pages/apply.php">apply</a></li>';}
                     ?>
                     
@@ -52,3 +66,4 @@
             </nav>
         </div>
     </header><!-- End Header -->
+    <!--54 lines-->
