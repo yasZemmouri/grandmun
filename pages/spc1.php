@@ -6,13 +6,13 @@
 $h1= 'Special Conference 1';
 $h2= 'The militarization of artificial intelligence';
 $title = ($h1 && $h2) ? "$h1. $h2" : ($h1 ? $h1 : ucfirst(basename($_SERVER['REQUEST_URI'])));
-include 'includes/head.php'; ?><!-- End Head -->
+include '../includes/head.php'; ?><!-- End Head -->
 
 <body>
-<?php include 'includes/navbar.php'; ?><!-- End Header -->
+<?php include '../includes/navbar.php'; ?><!-- End Header -->
     <div class="header-spacer"></div>
     <main id="spc1">
-        <div class="banner" style="background-image: url(assets/img/pexels-kindel-media-9028921.webp);">
+        <div class="banner" style="background-image: url(../assets/img/pexels-kindel-media-9028921.webp);">
             <div class="container-xl">
                 <h1><?php echo $h1?></h1>
             </div>
@@ -44,7 +44,7 @@ include 'includes/head.php'; ?><!-- End Head -->
                     Center for Security and Emerging Technology reported that the People's Liberation Army (PLA) of
                     China spends an average of $1.6 billion on AI-related projects...</p>
                 <p><strong>For more, download our research paper.</strong></p>
-                <div class="download-container gap-3"><a href="assets/documents/SPC%201%20research%20report%20final.pdf"
+                <div class="download-container gap-3"><a href="../pages/assets/documents/SPC%201%20research%20report%20final.pdf"
                         class="face-button" download>
                         <div class="face-primary"><i class="bi bi-cloud-download-fill"></i> Download</div>
                         <div class="face-secondary">SPC1 Research</div>
@@ -52,11 +52,11 @@ include 'includes/head.php'; ?><!-- End Head -->
             </div>
         </section>
     </main><!-- End Main -->
-    <?php include 'includes/footer.php'; ?><!-- End Footer -->
+    <?php include '../includes/footer.php'; ?><!-- End Footer -->
     <!-- Vendor js file -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
     <!-- Main js File -->
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

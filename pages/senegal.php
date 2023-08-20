@@ -6,13 +6,13 @@
 $h1='Senegal Project';
 $h2='Join GRANDMUN in Supporting the Building of a Library in Senegal';
 $title = ($h1 && $h2) ? "$h1. $h2" : ($h1 ? $h1 : ucfirst(basename($_SERVER['REQUEST_URI'])));
-include 'includes/head.php'; ?><!-- End Head -->
+include '../includes/head.php'; ?><!-- End Head -->
 
 <body>
-<?php include 'includes/navbar.php'; ?><!-- End Header -->
+<?php include '../includes/navbar.php'; ?><!-- End Header -->
     <div class="header-spacer"></div>
     <main id="senegal">
-        <div class="banner" style="background-image: url(assets/img/boots_ski_large_sport_25.jpg);">
+        <div class="banner" style="background-image: url(../assets/img/boots_ski_large_sport_25.jpg);">
             <div class="container-xl">
                 <h1><?php echo $h1?></h1>
             </div>
@@ -32,11 +32,11 @@ include 'includes/head.php'; ?><!-- End Head -->
             </div>
         </section>
     </main><!-- End Main -->
-    <?php include 'includes/footer.php'; ?><!-- End Footer -->
+    <?php include '../includes/footer.php'; ?><!-- End Footer -->
     <!-- Vendor js file -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
     <!-- Main js File -->
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

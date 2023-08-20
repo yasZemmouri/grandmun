@@ -6,9 +6,9 @@
 $h1 = '';
 $h2 = '';
 $title = ($h1 && $h2) ? "$h1. $h2" : ($h1 ? $h1 : ucfirst(basename($_SERVER['REQUEST_URI'])));
-include 'includes/head.php'; ?><!-- End Head -->
+include '../includes/head.php'; ?><!-- End Head -->
 <body>
-    <?php include 'includes/navbar.php'; ?><!-- End Header -->
+    <?php include '../includes/navbar.php'; ?><!-- End Header -->
     <div class="header-spacer"></div>
     <main id="apply">
         <!-- <iframe
@@ -21,11 +21,11 @@ include 'includes/head.php'; ?><!-- End Head -->
             mozallowfullscreen msallowfullscreen>
         </iframe>
     </main><!-- End Main -->
-    <?php include 'includes/footer.php'; ?><!-- End Footer -->
+    <?php include '../includes/footer.php'; ?><!-- End Footer -->
     <!-- Vendor js file -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
     <!-- Main js File -->
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 <?php
-    include 'includes/config.php';
+    include 'config.php';
 ?>
 <header class="d-flex align-items-center">
         <div class="container-xl d-flex align-items-center justify-content-between">
@@ -19,13 +19,13 @@
                 <ul>
              <!-- strpos() string position. returns string position of false if not found -->
                 <li><a href="/" <?php if (strpos($script_name, 'index.php') !== false) { echo 'class="active"'; } ?>>Home</a></li>
-                <li><a href="faq.php" <?php if (strpos($current_url, 'faq.php') !== false) { echo 'class="active"'; } ?>>FAQ</a></li>
-                <li><a href="senegal.php" <?php if (strpos($current_url, 'senegal.php') !== false) { echo 'class="active"'; } ?>>senegal project</a></li>
-                <li><a href="guide.php" <?php if (strpos($current_url, 'guide.php') !== false) { echo 'class="active"'; } ?>>delegate guides</a></li>
+                <li><a href="../pages/faq.php" <?php if (strpos($current_url, 'faq.php') !== false) { echo 'class="active"'; } ?>>FAQ</a></li>
+                <li><a href="../pages/senegal.php" <?php if (strpos($current_url, 'senegal.php') !== false) { echo 'class="active"'; } ?>>senegal project</a></li>
+                <li><a href="../pages/guide.php" <?php if (strpos($current_url, 'guide.php') !== false) { echo 'class="active"'; } ?>>delegate guides</a></li>
                 <li class="dropdown"><a href="javascript:void(0);"><span>Committees</span> <i
                                 class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
-                            <li><a href="ecosoc.php" <?php if (strpos($current_url, 'ecosoc.php') !== false) { echo 'class="active"'; } ?>>ECOSOC</a></li>
+                            <li><a href="../pages/ecosoc.php" <?php if (strpos($current_url, 'ecosoc.php') !== false) { echo 'class="active"'; } ?>>ECOSOC</a></li>
                             <!-- <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
                                         class="bi bi-chevron-down dropdown-indicator"></i></a>
                                 <ul>
@@ -36,16 +36,16 @@
                                     <li><a href="#">Deep Dropdown 5</a></li>
                                 </ul>
                             </li> -->
-                            <li><a href="spc1.php" <?php if (strpos($current_url, 'spc1.php') !== false) { echo 'class="active"'; } ?>>SPC 1</a></li>
-                            <li><a href="spc2.php" <?php if (strpos($current_url, 'spc2.php') !== false) { echo 'class="active"'; } ?>>SPC 2</a></li>
-                            <li><a href="hrc.php" <?php if (strpos($current_url, 'hrc.php') !== false) { echo 'class="active"'; } ?>>HRC</a></li>
+                            <li><a href="../pages/spc1.php" <?php if (strpos($current_url, 'spc1.php') !== false) { echo 'class="active"'; } ?>>SPC 1</a></li>
+                            <li><a href="../pages/spc2.php" <?php if (strpos($current_url, 'spc2.php') !== false) { echo 'class="active"'; } ?>>SPC 2</a></li>
+                            <li><a href="../pages/hrc.php" <?php if (strpos($current_url, 'hrc.php') !== false) { echo 'class="active"'; } ?>>HRC</a></li>
                         </ul>
                     </li>
                     <?php
                         
                         if($deadline > $now) {
-                            if (strpos($current_url, 'apply.php') !== false) { echo '<li><a href="apply.php" class="active">apply</a></li>'; }
-                            echo '<li><a href="apply.php">apply</a></li>';}
+                            if (strpos($current_url, 'apply.php') !== false) { echo '<li><a href="../pages/apply.php" class="active">apply</a></li>'; }
+                            echo '<li><a href="../pages/apply.php">apply</a></li>';}
                     ?>
                     
                 </ul>

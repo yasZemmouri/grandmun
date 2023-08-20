@@ -5,20 +5,20 @@
 $h1 = "Model United Nations Simulation";
 $h2='';
 $title = ($h1 && $h2) ? "$h1. $h2" : ($h1 ? $h1 : ucfirst(basename($_SERVER['REQUEST_URI'])));
-include 'includes/head.php'; ?><!-- End Head -->
+include '../includes/head.php'; ?><!-- End Head -->
 <body>
-<?php include 'includes/navbar.php'; ?><!-- End Header -->
+<?php include '../includes/navbar.php'; ?><!-- End Header -->
     <!---------------- Hero Section ------------------->
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="info d-flex align-items-center">
         <?php
-            include 'formProcessor.php';
-        ?>
+            // include '../forms/formProcessor.php';
+        ?> 
         <div class="container-xl">
             <div class="row justify-content-center">
-                <div class="col-lg-12 text-center" style="user-select: none;">
+                <div class="col-lg-12 text-center">
                     <!-- <h2><span>GRANDMUN</span></h2> -->
-                    <img id='logo-hero' src="assets/img/channels4_profile1.png" alt="Grandmun Logo">
+                    <img id='logo-hero' src="../assets/img/channels4_profile1.png" alt="Grandmun Logo">
                     <!-- <h3 id="countdown">
                         <span id="days">00</span> : <span id="hours">00</span> : <span id="minutes">00</span> : <span
                             id="seconds">00</span>
@@ -26,11 +26,12 @@ include 'includes/head.php'; ?><!-- End Head -->
                     <?php
                         // $now = time();
                         // $deadline = strtotime("2023-04-14 08:00:00");
+                        include '../includes/config.php';
                         if($deadline > $now){
                             //converting unix timestamp in secods to millisoconds Time()
                             echo '<script>var deadline = ' . $deadline * 1000 . '</script>';
                             echo '
-                            <script src="assets/js/countdown.js"></script>
+                            <script src="../assets/js/countdown.js"></script>
                             <div class="wrap">
                         <div class="countdown clearfix">
                             <!-- DIAS -->
@@ -131,7 +132,7 @@ include 'includes/head.php'; ?><!-- End Head -->
                             </div>
                         </div>
                     </div>
-                                <p><a href="apply.php" class="all-btn-link btn-apply">Apply</a></p>';
+                                <p><a href="../pages/apply.php" class="all-btn-link btn-apply">Apply</a></p>';
                         }
                     ?>
                     
@@ -160,7 +161,7 @@ include 'includes/head.php'; ?><!-- End Head -->
                     </ul>
                 </div>
                 <div class="lycee-logo">
-                    <img src="assets/img/Logo%20NDDG%20V%20rvb%2072%20dpi%20(1).png"
+                    <img src="../assets/img/Logo%20NDDG%20V%20rvb%2072%20dpi%20(1).png"
                         alt="Notre-Dame du Grandchamp Logo">
                 </div>
             </div>
@@ -229,12 +230,12 @@ include 'includes/head.php'; ?><!-- End Head -->
                             <div class="row">
                                 <div class="col-xl-5">
                                     <div class="card-bg"
-                                        style="background-image: url(assets/img/pexels-kindel-media-9028921.webp);">
+                                        style="background-image: url(../assets/img/pexels-kindel-media-9028921.webp);">
                                     </div>
                                 </div>
                                 <div class="col-xl-7 d-flex align-items-center">
                                     <div class="card-body">
-                                        <a href="spc1.php">
+                                        <a href="..pages/spc1.php">
                                             <h3 class="card-title"> Special Conference 1 </h3>
                                         </a>
                                         <p>Artificial Intelligence (AI) has the potential to improve the health and
@@ -254,12 +255,12 @@ include 'includes/head.php'; ?><!-- End Head -->
                             <div class="row">
                                 <div class="col-xl-5">
                                     <div class="card-bg"
-                                        style="background-image: url(assets/img/fountain-of-friendship-of-peoples-1630446_1920.webp);">
+                                        style="background-image: url(../assets/img/fountain-of-friendship-of-peoples-1630446_1920.webp);">
                                     </div>
                                 </div>
                                 <div class="col-xl-7 d-flex align-items-center">
                                     <div class="card-body">
-                                        <a href="spc2.php">
+                                        <a href="../pages/spc2.php">
                                             <h3 class="card-title"> Special Conference 2</h3>
                                         </a>
                                         <p>The Soviet Union was dissolved more than 30 years ago. In its wake, the Union
@@ -280,12 +281,12 @@ include 'includes/head.php'; ?><!-- End Head -->
                         <div class="card-item">
                             <div class="row">
                                 <div class="col-xl-5">
-                                    <div class="card-bg" style="background-image: url(assets/img/AI_blog.webp);">
+                                    <div class="card-bg" style="background-image: url(../assets/img/AI_blog.webp);">
                                     </div>
                                 </div>
                                 <div class="col-xl-7 d-flex align-items-center">
                                     <div class="card-body">
-                                        <a href="ecosoc.php">
+                                        <a href="../pages/ecosoc.php">
                                             <h3 class="card-title"> Economic and Social Council </h3>
                                         </a>
                                         <p>With the rapid technological advancement of recent years, computers are
@@ -315,12 +316,12 @@ include 'includes/head.php'; ?><!-- End Head -->
                             <div class="row">
                                 <div class="col-xl-5">
                                     <div class="card-bg"
-                                        style="background-image: url(assets/img/pexels-ahmed-akacha-6691665.webp);">
+                                        style="background-image: url(../assets/img/pexels-ahmed-akacha-6691665.webp);">
                                     </div>
                                 </div>
                                 <div class="col-xl-7 d-flex align-items-center">
                                     <div class="card-body">
-                                        <a href="hrc.php">
+                                        <a href="../pages/hrc.php">
                                             <h3 class="card-title">HRC</h3>
                                         </a>
                                         <p>The issue of statelessness is usually portrayed as an "invisible problem" in
@@ -348,7 +349,7 @@ include 'includes/head.php'; ?><!-- End Head -->
         <!-- <section id="spc1">
             <div class="container" data-aos="fade-up">
                 <div class="row justify-content-around gy-4">
-                    <div class="col-lg-6 img-bg" style="background-image: url(assets/img/AI-in-higher-education.jpg);"
+                    <div class="col-lg-6 img-bg" style="background-image: url(../assets/img/AI-in-higher-education.jpg);"
                         data-aos="zoom-in" data-aos-delay="100"></div>
                     <div class="col-lg-5 d-flex flex-column justify-content-center">
                         <h2>Special Conference 1</h2>
@@ -394,11 +395,11 @@ include 'includes/head.php'; ?><!-- End Head -->
             </div>
         </section>End ECS Section -->
     </main><!-- End Main -->
-    <?php include 'includes/footer.php'; ?><!-- End Footer -->
+    <?php include '../includes/footer.php'; ?><!-- End Footer -->
     <!-- Vendor js file -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
     <!-- Main js File -->
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

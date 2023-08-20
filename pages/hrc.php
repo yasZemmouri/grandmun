@@ -6,13 +6,13 @@
 $h1 = 'Human Rights Council';
 $h2 = 'Resolving Issues of Statelessness by Addressing Discriminatory Practices';
 $title = ($h1 && $h2) ? "$h1. $h2" : ($h1 ? $h1 : ucfirst(basename($_SERVER['REQUEST_URI'])));
-include 'includes/head.php'; ?><!-- End Head -->
+include '../includes/head.php'; ?><!-- End Head -->
 
 <body>
-<?php include 'includes/navbar.php'; ?><!-- End Header -->
+<?php include '../includes/navbar.php'; ?><!-- End Header -->
     <div class="header-spacer"></div>
     <main id="hrc">
-        <div class="banner" style="background-image: url(assets/img/pexels-ahmed-akacha-6691665.webp)">
+        <div class="banner" style="background-image: url(../assets/img/pexels-ahmed-akacha-6691665.webp)">
             <div class="container-xl">
                 <h1>Human Rights Council</h1>
             </div>
@@ -41,7 +41,7 @@ include 'includes/head.php'; ?><!-- End Head -->
                     certificate when they die. </p>
                 <p><strong>For more, download our research paper.</strong></p>
                 <div class="download-container gap-3">
-                    <a href="assets/documents/HRC%20research%20report%20final.pdf" class="face-button" download>
+                    <a href="../assets/documents/HRC%20research%20report%20final.pdf" class="face-button" download>
                         <div class="face-primary"><i class="bi bi-cloud-download-fill"></i> Download</div>
                         <div class="face-secondary">HRC Research</div>
                     </a>
@@ -49,11 +49,11 @@ include 'includes/head.php'; ?><!-- End Head -->
             </div>
         </section>
     </main><!-- End Main -->
-    <?php include 'includes/footer.php'; ?><!-- End Footer -->
+    <?php include '../includes/footer.php'; ?><!-- End Footer -->
     <!-- Vendor js file -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
     <!-- Main js File -->
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>
