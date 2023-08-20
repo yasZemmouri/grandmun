@@ -15,9 +15,6 @@ $title = generateTitle($h1, $h2);
     <!---------------- Hero Section ------------------->
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="info d-flex align-items-center">
-        <?php
-            // include '../forms/formProcessor.php';
-        ?> 
         <div class="container-xl">
             <div class="row justify-content-center">
                 <div class="col-lg-12 text-center">
@@ -401,9 +398,9 @@ $title = generateTitle($h1, $h2);
     </main><!-- End Main -->
     <?php include '../includes/footer.php'; ?><!-- End Footer -->
     <!-- Vendor js file -->
-    <script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src = <?php $bootstrapJS ?>></script>
     <!-- Main js File -->
-    <script src="../assets/js/main.js"></script>
+    <script src= <?php $mainJS?>></script>
 </body>
 
 </html>
