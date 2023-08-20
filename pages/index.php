@@ -26,7 +26,7 @@
                     </h3> -->
                     <?php
                         //$deadline and $now are defined in config.php which is already included in head.php
-                        if($deadline > $now){
+                        if($showApplicationLink){
                             //converting unix timestamp in secods to millisoconds Time()
                             echo '<script>let deadline = ' . $deadline * 1000 . '</script>';
                             echo '

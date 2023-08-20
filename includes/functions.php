@@ -4,5 +4,9 @@ function generateTitle($h1, $h2){
     if($h1 && $h2) return "$h1. $h2";
     else if($h1) return $h1;
     else return ucfirst(basename($_SERVER['REQUEST_URI']));
-}  
+} 
+//Function to check if application is open
+function isApplicationOpen($deadline, $now){
+    return $deadline > $now;
+} 
 ?>

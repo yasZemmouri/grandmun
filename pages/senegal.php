@@ -5,8 +5,12 @@
 <?php 
 $h1='Senegal Project';
 $h2='Join GRANDMUN in Supporting the Building of a Library in Senegal';
-$title = ($h1 && $h2) ? "$h1. $h2" : ($h1 ? $h1 : ucfirst(basename($_SERVER['REQUEST_URI'])));
-include '../includes/head.php'; ?><!-- End Head -->
+//Title
+include "../includes/functions.php";
+$title = generateTitle($h1, $h2);
+//<HEAD>
+include '../includes/head.php';
+?> <!-- End Head -->
 
 <body>
 <?php include '../includes/navbar.php'; ?><!-- End Header -->

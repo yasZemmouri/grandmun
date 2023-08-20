@@ -1,6 +1,6 @@
 <?php
 
-//URLs & Dependencies
+//URLs & Dependencies variables
 //Favicons & Icons
 $faviconUrl="../assets/img/favicon-32-2.ico";
 $appleTouchIconUrl = "../assets/img/favicon-160.png";
@@ -23,5 +23,6 @@ $timelineMaxUrl = "../assets/vendor/TimelineMax.min.js";
     // echo '<br>' . $now;
     $deadline = strtotime($deadline . " 08:00:00");
     // echo '<br>' . "number form deadline: " . $deadline;
+    $showApplicationLink = isApplicationOpen($deadline, $now);
     
 ?>

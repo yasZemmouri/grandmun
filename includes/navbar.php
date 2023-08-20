@@ -1,6 +1,8 @@
 <?php
     // To use $deadline and $now 
     include 'config.php';
+    include_once 'functions.php';
+    
     // Navbar Links Variables
     $navbarLinks = array(
         "Home" => "index.php",
@@ -53,13 +55,21 @@
                         }
                     }
                     ?>
+                    <!-- This is a "ternary operator with alternative systax" (short if) you don't need echo and the html is clear and separated from the php  -->
+                    <?php 
+                        if ($showApplicationLink){
+                            $activeClass = (strpos($script_name, 'apply.php') !== false) ? 'class="active"': '';
+                            //single quote don't interpret variables inside them but double quotes do. If you do '<li> you should use the . operator
+                            echo "<li><a href='apply.php' $activeClass>apply</a></li>";
+                        }
+                     ?>
 
              <!-- strpos() string position. returns string position or false if not found. if the position is 0 ==true is not going to work --> 
                     <?php
                         
-                        if($deadline > $now) {
-                            if (strpos($script_name, 'apply.php') !== false) { echo '<li><a href="../pages/apply.php" class="active">apply</a></li>'; }
-                            echo '<li><a href="../pages/apply.php">apply</a></li>';}
+                        // if($deadline > $now) {
+                        //     if (strpos($script_name, 'apply.php') !== false) { echo '<li><a href="../pages/apply.php" class="active">apply</a></li>'; }
+                        //     echo '<li><a href="../pages/apply.php">apply</a></li>';}
                     ?>
                     
                 </ul>
