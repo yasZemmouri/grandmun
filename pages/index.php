@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php
-//Markup Elements Variables
-$h1 = "Model United Nations Simulation";
-$h2='';
-//Title
-include "../includes/functions.php";
-$title = generateTitle($h1, $h2);
-?>
-<!-- HEAD -->
-<?php include '../includes/head.php';?> <!-- End Head -->
+    //Markup Elements Variables
+    $h1 = "Model United Nations Simulation";
+    $h2='';
+    //Title
+    include "../includes/functions.php";
+    $title = generateTitle($h1, $h2);
+    //<HEAD>
+    include '../includes/head.php';
+?> <!-- End Head -->
 <body>
-<?php include '../includes/navbar.php'; ?><!-- End Header -->
-    <!---------------- Hero Section ------------------->
+    <!-- Header -->
+    <?php include '../includes/navbar.php'; ?><!-- End Header -->
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="info d-flex align-items-center">
         <div class="container-xl">
@@ -25,12 +25,10 @@ $title = generateTitle($h1, $h2);
                             id="seconds">00</span>
                     </h3> -->
                     <?php
-                        // $now = time();
-                        // $deadline = strtotime("2023-04-14 08:00:00");
-                        include '../includes/config.php';
+                        //$deadline and $now are defined in config.php which is already included in head.php
                         if($deadline > $now){
                             //converting unix timestamp in secods to millisoconds Time()
-                            echo '<script>var deadline = ' . $deadline * 1000 . '</script>';
+                            echo '<script>let deadline = ' . $deadline * 1000 . '</script>';
                             echo '
                             <script src="../assets/js/countdown.js"></script>
                             <div class="wrap">
