@@ -20,20 +20,16 @@
                 <div class="col-lg-12 text-center">
                     <!-- <h2><span>GRANDMUN</span></h2> -->
                     <img id='logo-hero' src="../assets/img/channels4_profile1.png" alt="Grandmun Logo">
-                    <!-- <h3 id="countdown">
-                        <span id="days">00</span> : <span id="hours">00</span> : <span id="minutes">00</span> : <span
-                            id="seconds">00</span>
-                    </h3> -->
-                    <?php
-                        //$deadline and $now are defined in config.php which is already included in head.php
-                        if($showApplicationLink){
-                            //converting unix timestamp in secods to millisoconds Time()
-                            echo '<script>let deadline = ' . $deadline * 1000 . '</script>';
-                            echo '
-                            <script src="../assets/js/countdown.js"></script>
-                            <div class="wrap">
+                    <!-- This is the alternative if syntax it allows to directly write html instead of echoing strings -->
+                    <?php if($showApplicationLink): ?>
+                        <!-- $deadline and $now are defined in config.php which is already included in head.php -->
+                        <!-- converting unix timestamp in secods to millisoconds Time() -->
+                        <script>let deadline = <?php echo $deadline * 1000?>
+                        </script>                          
+                        <script src="../assets/js/countdown.js"></script>
+                        <div class="wrap">
                         <div class="countdown clearfix">
-                            <!-- DIAS -->
+                            <!-- Dias --> 
                             <div class="bloc-time days" data-init-value="7">
                                 <h4 class="count-title">Days</h4>
                                 <div class="figure days days-1">
@@ -81,7 +77,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <!-- MINUTOS -->
+                             <!-- /*MINUTOS*/ -->
                             <div class="bloc-time min" data-init-value="0">
                                 <span class="count-title">Minutes</span>
                                 <div class="figure min min-1">
@@ -105,7 +101,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <!-- SEGUNDOS -->
+                            <!-- /*SEGUNDOS*/ -->
                             <div class="bloc-time sec" data-init-value="0">
                                 <span class="count-title">Seconds</span>
                                 <div class="figure sec sec-1">
@@ -131,9 +127,8 @@
                             </div>
                         </div>
                     </div>
-                                <p><a href="../pages/apply.php" class="all-btn-link btn-apply">Apply</a></p>';
-                        }
-                    ?>
+                    <p><a href="../pages/apply.php" class="all-btn-link btn-apply">Apply</a></p>
+                    <?php endif; ?>
                     
                     
                 </div>

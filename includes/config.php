@@ -1,6 +1,6 @@
 <?php
 
-//URLs & Dependencies variables
+// ======= URLs & Dependencies variables ========
 //Favicons & Icons
 $faviconUrl="../assets/img/favicon-32-2.ico";
 $appleTouchIconUrl = "../assets/img/favicon-160.png";
@@ -16,13 +16,16 @@ $jqueryUrl = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js";
 $tweenMaxUrl = "../assets/vendor/TweenMax.min.js";
 $timelineMaxUrl = "../assets/vendor/TimelineMax.min.js";
 
-    // $deadline = strtotime("2023-10-14 08:00:00");
-    $now = time();
-    include '../forms/formProcessor.php';
-    // echo "date form deadline: " . $deadline;
-    // echo '<br>' . $now;
-    $deadline = strtotime($deadline . " 08:00:00");
-    // echo '<br>' . "number form deadline: " . $deadline;
-    $showApplicationLink = isApplicationOpen($deadline, $now);
+// ======= Deadline related variables ======= 
+$now = time();
+include '../forms/formProcessor.php';
+//$deadline is imported from formProcessor.php.
+$deadline = strtotime($deadline . " 08:00:00");
+// Check deadline to know if Application is Open
+$showApplicationLink = isApplicationOpen($deadline, $now);
+
+//To extract current file name to assign active class to the link of the current page
+//a superglobal variable that contains the virtual path of current script file.
+$script_name= $_SERVER['SCRIPT_NAME'];
     
 ?>

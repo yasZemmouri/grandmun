@@ -1,8 +1,6 @@
 <?php
     // To use $deadline and $now 
-    include 'config.php';
-    include_once 'functions.php';
-    
+    include 'config.php';   
     // Navbar Links Variables
     $navbarLinks = array(
         "Home" => "index.php",
@@ -15,9 +13,11 @@
             "spc 2" => "spc2.php",
             "HRC" => "hrc.php"
         ]
-        // 'apply' => 'apply.php'
-    )
-
+        );
+    //Add the Apply link to the navbar if application is open
+    if ($showApplicationLink){
+        $navbarLinks['apply'] = 'apply.php';
+    }
 ?>
 <header class="d-flex align-items-center">
         <div class="container-xl d-flex align-items-center justify-content-between">
@@ -29,13 +29,7 @@
             <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
             <i class="mobile-nav-toggle mobile-nav-hide d-none  bi bi-x"></i>
             <nav class="navbar">
-                   <?php
-                   //This variable provides the complete URL of the current page.
-                    // $current_url = $_SERVER['REQUEST_URI'];
-                    //a superglobal variable that contains the virtual path of the current script file.
-                    $script_name= $_SERVER['SCRIPT_NAME'];
-                    
-                ?>
+                <!-- Navigation Links Insertion -->
                 <ul>
                     <?php
                     foreach($navbarLinks as $title=>$url){
@@ -55,23 +49,6 @@
                         }
                     }
                     ?>
-                    <!-- This is a "ternary operator with alternative systax" (short if) you don't need echo and the html is clear and separated from the php  -->
-                    <?php 
-                        if ($showApplicationLink){
-                            $activeClass = (strpos($script_name, 'apply.php') !== false) ? 'class="active"': '';
-                            //single quote don't interpret variables inside them but double quotes do. If you do '<li> you should use the . operator
-                            echo "<li><a href='apply.php' $activeClass>apply</a></li>";
-                        }
-                     ?>
-
-             <!-- strpos() string position. returns string position or false if not found. if the position is 0 ==true is not going to work --> 
-                    <?php
-                        
-                        // if($deadline > $now) {
-                        //     if (strpos($script_name, 'apply.php') !== false) { echo '<li><a href="../pages/apply.php" class="active">apply</a></li>'; }
-                        //     echo '<li><a href="../pages/apply.php">apply</a></li>';}
-                    ?>
-                    
                 </ul>
             </nav>
         </div>
