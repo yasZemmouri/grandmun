@@ -23,8 +23,14 @@
                     <!-- This is the alternative if syntax it allows to directly write html instead of echoing strings -->
                     <?php if($showApplicationLink): ?>
                         <!-- $deadline and $now are defined in config.php which is already included in head.php -->
-                        <!-- converting unix timestamp in secods to millisoconds Time() -->
-                        <script>let deadline = <?php echo $deadline * 1000?>
+
+                        <?= 
+                        
+                            //converting unix timestamp in secods to millisoconds Time()
+                            $jsDeadline = $deadline * 1000;
+                            $jsonvar = json_encode($jsDeadline);
+                        ?>
+                        <script>let deadline = <?php echo $jsonvar?>
                         </script>                          
                         <script src="../assets/js/countdown.js"></script>
                         <div class="wrap">
