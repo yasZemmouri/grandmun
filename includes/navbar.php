@@ -15,7 +15,7 @@
         ]
         );
     //Add the Apply link to the navbar if application is open
-    if ($showApplicationLink){
+    if ($applicationOpen){
         $navbarLinks['apply'] = 'apply.php';
     }
 ?>

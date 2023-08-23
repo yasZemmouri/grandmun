@@ -1,3 +1,6 @@
+<?php
+    ob_start(); // start output buffering
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,3 +64,6 @@ include '../includes/head.php';
 </body>
 
 </html>
+<?php
+file_put_contents('generated.html', ob_get_clean()); // save the buffer content to a file and end output buffering
+?>

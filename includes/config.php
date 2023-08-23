@@ -22,7 +22,7 @@ include '../forms/formProcessor.php';
 //$deadline is imported from formProcessor.php.
 $deadline = strtotime($deadline . " 08:00:00");
 // Check deadline to know if Application is Open
-$showApplicationLink = isApplicationOpen($deadline, $now);
+$applicationOpen = isApplicationOpen($deadline, $now);
 
 //To extract current file name to assign active class to the link of the current page
 //a superglobal variable that contains the virtual path of current script file.
