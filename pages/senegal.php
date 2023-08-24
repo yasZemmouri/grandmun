@@ -6,7 +6,7 @@
 $h1='Senegal Project';
 $h2='Join GRANDMUN in Supporting the Building of a Library in Senegal';
 //Title
-include "../includes/functions.php";
+include_once "../includes/functions.php";
 $title = generateTitle($h1, $h2);
 //<HEAD>
 include '../includes/head.php';

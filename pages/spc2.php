@@ -6,7 +6,7 @@
 $h1='Special Conference 2';
 $h2='Confirming the sovereignty of former Soviet states';
 //Title
-include "../includes/functions.php";
+include_once "../includes/functions.php";
 $title = generateTitle($h1, $h2);
 //<HEAD>
 include '../includes/head.php';

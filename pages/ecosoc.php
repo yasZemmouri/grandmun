@@ -1,5 +1,5 @@
 <?php
-    ob_start(); // start output buffering
+    // ob_start(); // start output buffering
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +9,7 @@
 $h1 = 'economic and social council';
 $h2 = 'Countering Unemployment Caused by Automation';
 //Title
-include "../includes/functions.php";
+include_once "../includes/functions.php";
 $title = generateTitle($h1, $h2);
 //<HEAD>
 include '../includes/head.php';
@@ -65,5 +65,5 @@ include '../includes/head.php';
 
 </html>
 <?php
-file_put_contents('generated.html', ob_get_clean()); // save the buffer content to a file and end output buffering
+// file_put_contents('generated.html', ob_get_clean()); // save the buffer content to a file and end output buffering
 ?>

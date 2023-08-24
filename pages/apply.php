@@ -6,7 +6,7 @@
 $h1 = '';
 $h2 = '';
 //Title
-include "../includes/functions.php";
+include_once "../includes/functions.php";
 $title = generateTitle($h1, $h2);
 //<HEAD>
 include '../includes/head.php';
