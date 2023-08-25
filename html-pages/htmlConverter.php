@@ -23,6 +23,15 @@
         //ob_get_clean() return the content of the buffer and delete it and turn of ob_start. Now we saved the content of the buffer in $content
         $bufferContent = ob_get_clean();
         //save the buffer content to an HTML file in the destination directory
+        //file_put_content saves content into a file it takes 2 parameters the destination file path and the content. if the destination file doesn't exist it will create one.
         file_put_contents($dest_dir . '/' . $filename . '.html', $bufferContent);
+        //Let's convert the links to php files into links to html files
+        // copy the file content and store it in $htmlContent
+        $htmlContent = file_get_contents($dest_dir . '/' . $filename . '.html');
+        // replace any .php with .html in the content
+        //str_replace any occurrence of a substring with another. str_replace(search, replace, where)
+        $htmlContent = str_replace('.php', '.html', $htmlContent); // Convert PHP links to HTML links
+
+        file_put_contents($dest_dir . '/' . $filename . '.html', $htmlContent);
     }
 ?>
