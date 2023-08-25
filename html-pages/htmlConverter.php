@@ -24,15 +24,15 @@
         $bufferContent = ob_get_clean();
         //save the buffer content to an HTML file in the destination directory
         //file_put_content saves content into a file it takes 2 parameters the destination file path and the content. if the destination file doesn't exist it will create one.
-        $filePath = "$dest_dir/$filename.html";
-        file_put_contents($filePath, $bufferContent);
+        $htmlFilePath = "$dest_dir/$filename.html";
+        file_put_contents($htmlFilePath, $bufferContent);
         //Let's convert the links to php files into links to html files
         // copy the file content and store it in $htmlContent
-        $htmlContent = file_get_contents($filePath);
+        $htmlContent = file_get_contents($htmlFilePath);
         // replace any .php with .html in the content
         //str_replace any occurrence of a substring with another. str_replace(search, replace, where)
         $htmlContent = str_replace('.php', '.html', $htmlContent); // Convert PHP links to HTML links
 
-        file_put_contents($filePath, $htmlContent);
+        file_put_contents($htmlFilePath, $htmlContent);
     }
 ?>
