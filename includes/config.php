@@ -19,6 +19,7 @@ $timelineMaxUrl = "../assets/vendor/TimelineMax.min.js";
 // ======= Deadline related variables ======= 
 $now = time();
 include '../forms/formProcessor.php';
+include_once '../includes/functions.php';
 //$deadline is imported from formProcessor.php.
 $deadline = strtotime($deadline . " 08:00:00");
 // Check deadline to know if Application is Open
